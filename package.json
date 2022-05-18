@@ -1,22 +1,15 @@
 {
-  "name": "codeformater-bot",
-  "version": "1.0.0",
-  "description": "This is a Github Code formatting bot",
+    "name": "prettier-formatting-example",
+    "version": "1.0.0",
+    "description": "Auto formatting code using Prettier and GitHub Actions",
+    "author": "Mark Skelton",
+    "license": "ISC",
+    "repository": "github:mskelton/prettier-formatting-example",
+  "homepage": "https://mskelton.dev/blog/auto-formatting-code-using-prettier-and-github-actions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VikashPR/CodeFormater-Bot.git"
-  },
-  "author": "Vikash PR",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VikashPR/CodeFormater-Bot/issues"
-  },
-  "homepage": "https://github.com/VikashPR/CodeFormater-Bot#readme",
   "devDependencies": {
     "prettier": "^2.5.1"
   }
