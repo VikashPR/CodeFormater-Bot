@@ -25,8 +25,7 @@ $(document).ready(function(){
 	//=== do some code stuff...
 
 	//===finally, bind my events...
-	bindEvents();
-});
+	bindEvents();});
 
 //===This function handles event binding for anything on the page....
 function bindEvents(){
@@ -45,7 +44,6 @@ function bindEvents(){
 
 		// Or, I could do this...
 		$a = $(event.target);
-
 		// I could also get the id of the link like so:
 		var id = event.target.id;
 
