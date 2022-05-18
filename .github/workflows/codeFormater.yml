@@ -1,22 +1,18 @@
-name: Check JavaScript for conformance with Prettier
-
-on:
-  push:
-  pull_request:
+name: Prettier
+on: [push]
 
 jobs:
-  prettier:
+  build:
+    name: Prettier
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo
-      uses: actions/checkout@v2
-    - uses: actions/cache@v2
-      name: Configure npm caching
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/prettier.yml') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-
-    - name: Run prettier
-      run: |-
-        npx prettier --check 'static/*[!.min].js'
+      - uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+
+      - run: npm run format
+      - run: git status
+      # commit any changed files
+      # https://github.com/mikeal/publish-to-github-action
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
