@@ -4,7 +4,7 @@
     "description": "Auto formatting code using Prettier and GitHub Actions",
     "author": "Mark Skelton",
     "license": "ISC",
-    "repository": "github:mskelton/prettier-formatting-example",
+    "repository": "github:VikashPR/CodeFormater-Bot",
   "homepage": "https://mskelton.dev/blog/auto-formatting-code-using-prettier-and-github-actions",
   "main": "index.js",
   "scripts": {
